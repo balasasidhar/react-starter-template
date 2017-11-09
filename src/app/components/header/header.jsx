@@ -6,6 +6,8 @@ import './header.styles.less';
 
 import React, {Component} from 'react';
 
+import Navbar from '../navbar/navbar.jsx';
+
 class Header extends Component {
 
     constructor(props) {
@@ -15,7 +17,9 @@ class Header extends Component {
 
     render() {
         return (
-            <div> Header Component </div>
+            <div>
+                <Navbar/>
+            </div>
         );
     }
 

@@ -2,12 +2,9 @@
  * Created by sasidhar on 09/11/17.
  */
 
-import './index.styles.less';
-
 import React, {Component} from 'react';
 import Header from '../../components/header/header.jsx';
-
-class Index extends Component {
+class Blog extends Component {
 
     constructor(props) {
         super(props);
@@ -21,7 +18,7 @@ class Index extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2>Home Page</h2>
+                            <h2>Blog Page</h2>
                         </div>
                     </div>
                 </div>
@@ -31,4 +28,4 @@ class Index extends Component {
 
 }
 
-export default Index;
+export default Blog;

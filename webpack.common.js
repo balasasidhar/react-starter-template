@@ -46,14 +46,31 @@ module.exports = {
                     }
                 }]
             },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            context: '',
+                            name: '[name].[ext]',
+                            useRelativePath: process.env.NODE_ENV === "production",
+                            outputPath: 'assets/img/'
+                        }
+                    }
+                ]
+            }
         ]
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'P&G',
+            title: 'Reactjs Template',
             template: './src/index.html'
         }),
         extractLess
-    ]
+    ],
+    resolve: {
+        extensions: ['.js', '.jsx']
+    }
 };

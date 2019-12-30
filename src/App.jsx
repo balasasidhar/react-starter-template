@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import loadable from '@loadable/component';
 
 import routes from './config/routes.config';
@@ -23,11 +18,11 @@ const App = () => (
       {routes.map(({ component, exact, label, path, isPrivate }) =>
         isPrivate ? (
           <PrivateRoute exact={exact} key={label} path={path}>
-            <AsyncPage page={component}></AsyncPage>
+            <AsyncPage page={component} />
           </PrivateRoute>
         ) : (
           <Route exact={exact} key={label} path={path}>
-            <AsyncPage page={component}></AsyncPage>
+            <AsyncPage page={component} />
           </Route>
         )
       )}

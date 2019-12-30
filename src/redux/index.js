@@ -14,10 +14,6 @@ const client = axios.create({
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 let middlewares = [thunk, axiosMiddleware(client)];
 
-if (process.env.NODE_EN !== 'production')
-  middlewares = [...middlewares, logger];
+if (process.env.NODE_EN !== 'production') middlewares = [...middlewares, logger];
 
-export default createStore(
-  rootReducer,
-  composeEnhancers(applyMiddleware(...middlewares))
-);
+export default createStore(rootReducer, composeEnhancers(applyMiddleware(...middlewares)));

@@ -2,15 +2,14 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import loadable from '@loadable/component';
+import store from './redux';
+import './scss/theme.scss';
 
-const Bootstrap = loadable.lib(() =>
-  import('bootstrap/dist/css/bootstrap.min.css')
-);
+const Bootstrap = loadable.lib(() => import('bootstrap/dist/css/bootstrap.min.css'));
 const AppComponent = loadable(() => import('./App'), {
+  // eslint-disable-next-line react/jsx-filename-extension
   fallback: <div>Please wait...</div>
 });
-
-import store from './redux';
 
 render(
   <Provider store={store}>

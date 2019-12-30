@@ -2,6 +2,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackBar = require('webpackbar');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -14,6 +15,16 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        enforce: 'pre',
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          failOnError: true,
+          emitError: true
+        }
+      },
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
@@ -39,7 +50,8 @@ module.exports = {
       title: 'Dashboard',
       template: path.resolve(__dirname, 'src', 'index.html')
     }),
-    new WebpackBar()
+    new WebpackBar(),
+    new StylelintPlugin({ emitError: true, failOnError: true })
   ],
   resolve: {
     extensions: ['.js', '.jsx']

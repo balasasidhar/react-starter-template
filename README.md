@@ -56,7 +56,6 @@
 
   ```
   $ npm run test
-
   ```
 
 - ### Production Build

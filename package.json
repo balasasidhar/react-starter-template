@@ -1,14 +1,17 @@
 {
-  "name": "react-webpack-boilerplate",
+  "name": "react-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=10.x"
+  },
   "dependencies": {
     "@loadable/component": "^5.11.0",
     "axios": "^0.19.0",
     "bootstrap": "^4.4.1",
     "cross-env": "^6.0.3",
-    "formik": "^2.0.8",
+    "formik": "^2.1.0",
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -34,6 +37,8 @@
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",
@@ -47,6 +52,7 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^3.1.0",
+    "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
@@ -68,11 +74,12 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --open --config webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
     "serve": "cross-env NODE_ENV=production npx serve dist/",
+    "test": "jest",
     "clean": "rimraf dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/balasasidhar/react-webpack-boilerplate.git"
+    "url": "git+https://github.com/balasasidhar/react-boilerplate.git"
   },
   "keywords": [
     "react",
@@ -84,7 +91,7 @@
   "author": "balasasidhar (howdy@balasasidhar.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/balasasidhar/react-webpack-boilerplate/issues"
+    "url": "https://github.com/balasasidhar/react-boilerplate/issues"
   },
-  "homepage": "https://github.com/balasasidhar/react-webpack-boilerplate#readme"
+  "homepage": "https://github.com/balasasidhar/react-boilerplate#readme"
 }

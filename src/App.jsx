@@ -7,7 +7,7 @@ import routes from './config/routes.config';
 import PrivateRoute from './components/PrivateRoute';
 import DefaultNavbar from './components/DefaultNavbar';
 
-const AsyncPage = loadable(props => import(`./views/${props.page}`), {
+const AsyncPage = loadable((props) => import(`./views/${props.page}`), {
   fallback: <div>Loading...</div>
 });
 

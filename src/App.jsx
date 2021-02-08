@@ -2,13 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import loadable from '@loadable/component';
 
-import routes from './config/routes.config';
+import PrivateRoute from '@components/PrivateRoute';
+import DefaultNavbar from '@components/DefaultNavbar';
 
-import PrivateRoute from './components/PrivateRoute';
-import DefaultNavbar from './components/DefaultNavbar';
+import routes from '@config/routes.config';
 
 const AsyncPage = loadable((props) => import(`./views/${props.page}`), {
-  fallback: <div>Loading...</div>
+  fallback: <div>Loading...</div>,
+  cacheKey: (props) => props.page
 });
 
 const App = () => (

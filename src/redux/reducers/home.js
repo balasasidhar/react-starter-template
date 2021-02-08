@@ -1,4 +1,4 @@
-import { LOADING } from '../action-types';
+import { LOADING } from '@action-types';
 
 const STATE_INIT = {
   isLoading: false

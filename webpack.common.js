@@ -54,6 +54,17 @@ module.exports = {
     new StylelintPlugin({ emitError: true, failOnError: true })
   ],
   resolve: {
-    extensions: ['.js', '.jsx']
+    modules: [path.resolve('node_modules')],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    alias: {
+      '@views': path.resolve(__dirname, 'src', 'views'),
+      '@components': path.resolve(__dirname, 'src', 'components'),
+      '@config': path.resolve(__dirname, 'src', 'config'),
+      '@redux': path.resolve(__dirname, 'src', 'redux'),
+      '@action-types': path.resolve(__dirname, 'src', 'redux', 'action-types'),
+      '@actions': path.resolve(__dirname, 'src', 'redux', 'action-creators'),
+      '@reducers': path.resolve(__dirname, 'src', 'redux', 'reducers'),
+      '@scss': path.resolve(__dirname, 'src', 'scss')
+    }
   }
 };

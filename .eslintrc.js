@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   env: {
     browser: true,
@@ -16,8 +18,17 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: ['react', 'prettier'],
+  plugins: ['react', 'prettier', 'import'],
   rules: {
-    'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
+    'react/jsx-props-no-spreading': 'off',
+    'react/jsx-curly-newline': 'off'
+  },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: path.resolve(__dirname, 'webpack.common.js')
+      }
+    }
   }
 };

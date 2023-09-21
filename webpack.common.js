@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackBar = require('webpackbar');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -15,16 +16,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-        options: {
-          failOnError: true,
-          emitError: true
-        }
-      },
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
@@ -51,7 +42,8 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'index.html')
     }),
     new WebpackBar(),
-    new StylelintPlugin({ emitError: true, failOnError: true })
+    new StylelintPlugin({ emitError: true, failOnError: true }),
+    new ESLintPlugin({ extensions: ['js', 'jsx'] })
   ],
   resolve: {
     modules: [path.resolve('node_modules')],

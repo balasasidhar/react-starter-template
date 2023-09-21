@@ -1,8 +1,8 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const PrivateRoute = ({ children, ...rest }) => {
+function PrivateRoute({ children, ...rest }) {
   const isAuthenticated = () => false;
   return (
     <Route
@@ -11,7 +11,7 @@ const PrivateRoute = ({ children, ...rest }) => {
         isAuthenticated() ? (
           children
         ) : (
-          <Redirect
+          <Navigate
             to={{
               pathname: '/login',
               state: { from: location }
@@ -21,7 +21,7 @@ const PrivateRoute = ({ children, ...rest }) => {
       }
     />
   );
-};
+}
 
 PrivateRoute.propTypes = {
   children: PropTypes.element.isRequired

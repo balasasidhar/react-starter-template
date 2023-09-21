@@ -89,7 +89,7 @@
 - Styles
 
   - [Bootstrap v4](https://getbootstrap.com/)
-  - [Reactstrap](https://reactstrap.github.io/)
+  - [React Bootstrap](https://react-bootstrap.netlify.app/)
   - [Styled Components](https://www.styled-components.com/)
   - [SASS/SCSS](https://sass-lang.com/)
 

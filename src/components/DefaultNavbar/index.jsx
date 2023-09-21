@@ -1,59 +1,30 @@
-import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from 'reactstrap';
-import { NavLink as Link } from 'react-router-dom';
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
-const DefaultNavbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
+function DefaultNavbar() {
   return (
-    <div>
-      <Navbar color="dark" dark expand="md">
-        <NavbarBrand tag={Link} to="/">
-          React Boilerplate
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink tag={Link} to="login">
-                Login
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/balasasidhar/react-boilerplate" target="_blank">
-                GitHub
-              </NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+    <Navbar bg="dark" data-bs-theme="dark">
+      <Container>
+        <Navbar.Brand to="/" as={Link}>
+          Gadgets Hub
+        </Navbar.Brand>
+        <Nav className="me-auto">
+          <Nav.Link to="/" as={Link}>
+            Home
+          </Nav.Link>
+          <Nav.Link to="/login" as={Link}>
+            Login
+          </Nav.Link>
+          <Nav.Link to="/my-account" as={Link}>
+            My Account
+          </Nav.Link>
+        </Nav>
+      </Container>
+    </Navbar>
   );
-};
+}
 
 export default DefaultNavbar;

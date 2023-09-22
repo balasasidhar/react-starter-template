@@ -1,20 +1,11 @@
-/* eslint-disable no-undef */
-import { createStore, compose, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import axios from 'axios';
-import axiosMiddleware from 'redux-axios-middleware';
-import logger from 'redux-logger';
+import { configureStore } from '@reduxjs/toolkit';
 
-import rootReducer from '@reducers';
+import homeReducer from './homeSlice';
 
-const client = axios.create({
-  baseURL: 'http://localhost:8080/api',
-  responseType: 'json'
+const store = configureStore({
+  reducer: {
+    home: homeReducer
+  }
 });
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-let middlewares = [thunk, axiosMiddleware(client)];
-
-if (__DEV__) middlewares = [...middlewares, logger];
-
-export default createStore(rootReducer, composeEnhancers(applyMiddleware(...middlewares)));
+export default store;

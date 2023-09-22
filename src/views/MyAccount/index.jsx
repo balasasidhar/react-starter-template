@@ -1,7 +1,7 @@
 import React from 'react';
 
-const MyAccount = () => {
+function MyAccount() {
   return <div>MyAccount - It is Protected</div>;
-};
+}
 
 export default MyAccount;

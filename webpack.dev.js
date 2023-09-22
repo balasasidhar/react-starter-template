@@ -6,9 +6,16 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist',
-    publicPath: '/',
-    historyApiFallback: true
+    // contentBase: './dist',
+    // publicPath: '/',
+    historyApiFallback: true,
+    compress: true,
+    liveReload: true,
+    port: 8080,
+    proxy: {
+      '/api': { target: 'http://localhost:3000', pathRewrite: { '^/api': '' } }
+    },
+    watchFiles: ['src/**/*']
   },
   module: {
     rules: [

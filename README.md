@@ -80,16 +80,16 @@
 
 - React & More
 
-  - [ReactJS](https://reactjs.org/)
-  - [React Router v4](https://reacttraining.com/react-router/)
+  - [ReactJS v18](https://reactjs.org/)
+  - [React Router v6](https://reactrouter.com/en/main)
   - [PropTypes](https://github.com/facebook/prop-types)
   - [React Redux](https://react-redux.js.org/)
   - [Loadable Components](https://loadable-components.com/)
 
 - Styles
 
-  - [Bootstrap v4](https://getbootstrap.com/)
-  - [Reactstrap](https://reactstrap.github.io/)
+  - [Bootstrap v5](https://getbootstrap.com/)
+  - [React Bootstrap](https://react-bootstrap.netlify.app/)
   - [Styled Components](https://www.styled-components.com/)
   - [SASS/SCSS](https://sass-lang.com/)
 
@@ -106,7 +106,7 @@
 
 - Build Tools
 
-  - [Webpack v4](https://webpack.js.org/)
+  - [Webpack v5](https://webpack.js.org/)
   - [Babel v7](https://babeljs.io/)
 
 - Lint and Validators

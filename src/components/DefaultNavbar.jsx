@@ -15,11 +15,14 @@ function DefaultNavbar() {
           <Nav.Link to="/" as={Link}>
             Home
           </Nav.Link>
-          <Nav.Link to="/login" as={Link}>
-            Login
-          </Nav.Link>
           <Nav.Link to="/my-account" as={Link}>
             My Account
+          </Nav.Link>
+        </Nav>
+
+        <Nav>
+          <Nav.Link to="/login" as={Link}>
+            Login
           </Nav.Link>
         </Nav>
       </Container>

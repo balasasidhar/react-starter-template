@@ -22,7 +22,14 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'react/jsx-props-no-spreading': 'off',
-    'react/jsx-curly-newline': 'off'
+    'react/jsx-curly-newline': 'off',
+    'no-param-reassign': [
+      'error',
+      {
+        props: true,
+        ignorePropertyModificationsFor: ['state']
+      }
+    ]
   },
   settings: {
     'import/resolver': {

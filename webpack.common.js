@@ -38,7 +38,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Dashboard',
+      title: 'My Application',
       template: path.resolve(__dirname, 'src', 'index.html')
     }),
     new WebpackBar(),
@@ -52,6 +52,7 @@ module.exports = {
       '@views': path.resolve(__dirname, 'src', 'views'),
       '@components': path.resolve(__dirname, 'src', 'components'),
       '@config': path.resolve(__dirname, 'src', 'config'),
+      '@routes': path.resolve(__dirname, 'src', 'routes'),
       '@redux': path.resolve(__dirname, 'src', 'redux'),
       '@action-types': path.resolve(__dirname, 'src', 'redux', 'action-types'),
       '@actions': path.resolve(__dirname, 'src', 'redux', 'action-creators'),

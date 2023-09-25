@@ -1,26 +1,26 @@
 # React Boilerplate
 
-### A quick start ReactJS template with client side rendering, code splitting and lazy loading.
+### A quick ReactJS starter template with Client-Side Rendering, code splitting and lazy loading.
 
-`ReactJS, React Router 4, Redux, Bootstrap4, Styled Components, Babel7 and Webpack 4`
+`ReactJS v18, React Router v6, Redux, Bootstrap v5, Styled Components, Babel7 and Webpack 5`
 
-> Make sure that you've installed [NodeJS](https://nodejs.org/en/) 10.x or higher and NPM version 6.x or higher.
+> Make sure that you've installed [NodeJS](https://nodejs.org/en/) 18.x or higher and NPM version 9.x or higher.
 
 - ### Development
 
   - Clone the repo
 
   ```
-  $ git clone git@github.com:balasasidhar/react-boilerplate.git
+  $ git clone https://github.com/balasasidhar/react-starter-template.git
   ```
 
-  - Navigate to root directory
+  - Navigate to the root directory
 
   ```
-  $ cd react-boilerplate
+  $ cd react-starter-template
   ```
 
-  - Install dependecies using yarn or npm
+  - Install dependencies using yarn or npm
 
   ```
   $ yarn install
@@ -32,7 +32,7 @@
   $ npm install
   ```
 
-  - Start development server
+  - Start the development server
 
   ```
   $ yarn start
